@@ -67,7 +67,7 @@ class ExcelController extends Controller
 
             }else {
                 $user = User::where('rut', $row['RUT'])->first();
-                // Si el usuario ya existe, añademos los horarios, sin embargo tenemos que verificar si ya existe el horario
+                // Si el usuario ya existe, registramos los horarios, sin embargo tenemos que verificar si ya existe el horario
                 foreach ($horarios as $horario) {
                     Hour::create([
                         'user_id' => $user->id,
@@ -81,6 +81,11 @@ class ExcelController extends Controller
             }
 
         }
+        // TODO:
+        // 1. Si el usuario ya existe y el horario ya existe, ¿se reemplaza o se añade al actual?
+        // 2. ¿Al subir el archivo, se debe eliminar el anterior y subir el nuevo?
+        // 3. .....
+
 
         return response()->json([
             'message' => 'Datos recibidos correctamente',
