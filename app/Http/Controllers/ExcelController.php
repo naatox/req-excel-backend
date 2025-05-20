@@ -85,7 +85,8 @@ class ExcelController extends Controller
         return response()->json([
             'message' => 'Datos recibidos correctamente',
             'total' => count($data),
-            'status' => 'success'
+            'status' => 'success',
+            'pd'=> 'ok',
         ], 200);
     }
 }
