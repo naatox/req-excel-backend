@@ -8,8 +8,10 @@ class Hour extends Model
 {
     protected $fillable = [
         'user_id',
+        'day',
         'start_time',
         'end_time',
+        'value'
     ];
 
     public function user()

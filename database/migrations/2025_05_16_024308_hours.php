@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('hours', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
+            $table->string('day');
             $table->string('start_time');
             $table->string('end_time');
+            $table->string('value');
             $table->timestamps();
         });
     }
