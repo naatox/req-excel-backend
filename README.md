@@ -54,7 +54,7 @@ DB_PASSWORD=tu_contraseña
 php artisan migrate
 ```
 
-7. **Iniciar Servido**
+7. **Iniciar Servidor**
 
 ```bash
 php artisan serve
