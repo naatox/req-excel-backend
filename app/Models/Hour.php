@@ -11,7 +11,8 @@ class Hour extends Model
         'day',
         'start_time',
         'end_time',
-        'value'
+        'value',
+
     ];
 
     public function user()
